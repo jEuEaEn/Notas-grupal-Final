@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <div id="npu" contenteditable="false" >asdf</div>
+
+    <script>
+        document.getElementById("npu").addEventListener("click", () => {
+            document.getElementById("npu").contentEditable = "true"
+            document.getElementById("npu").textContent = ""
+        })
+    </script>
+
+</body>
+</html>
