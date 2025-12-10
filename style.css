@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 nav {
     display: flex;
     align-items: center;
@@ -5,6 +10,10 @@ nav {
     background: #222;
     padding: 10px 15px;
     color: white;
+    width: 100%;        /* ocupa toda la pantalla */
+    height: 70px;       /* se ajusta al contenido */
+    box-sizing: border-box;
+    
 }
 
 /* ---- IZQUIERDA ---- */
