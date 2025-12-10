@@ -21,11 +21,12 @@ nav {
 .nav-left {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
 }
 
 .keep{
     height: 50px;
+    
 }
 
 .NotiHub{
@@ -37,6 +38,7 @@ nav {
     height: 30px;
     border: 4px;
 }
+
 .menu-button,
 .refresh-button,
 .view-button,
@@ -49,21 +51,14 @@ nav {
     font-size: 15px;
 }
 
-/* ---- CENTRO ---- */
-.nav-center {
-    flex: 1;
+/* ---- Parte botones ---- */
+aside{
     display: flex;
-    justify-content: center;
+    justify-content: column;
+    align-items: center;
+    
 }
 
-.nav-center input {
-    width: 60%;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    background: #444;
-    color: white;
-}
 
 /* ---- DERECHA ---- */
 .nav-right {
