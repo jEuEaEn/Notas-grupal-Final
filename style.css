@@ -1,0 +1,50 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #222;
+    padding: 10px 15px;
+    color: white;
+}
+
+/* ---- IZQUIERDA ---- */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu-button,
+.refresh-button,
+.view-button,
+.apps-button,
+.profile-button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+/* ---- CENTRO ---- */
+.nav-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-center input {
+    width: 60%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background: #444;
+    color: white;
+}
+
+/* ---- DERECHA ---- */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
