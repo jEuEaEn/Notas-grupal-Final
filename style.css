@@ -7,13 +7,14 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #222;
+    background: #918f8f;
     padding: 10px 15px;
-    color: white;
+    color: rgb(0, 0, 0);
     width: 100%;        /* ocupa toda la pantalla */
-    height: 70px;       /* se ajusta al contenido */
+    height: 80px;       /* se ajusta al contenido */
     box-sizing: border-box;
-    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
 }
 
 /* ---- IZQUIERDA ---- */
@@ -23,6 +24,19 @@ nav {
     gap: 15px;
 }
 
+.keep{
+    height: 50px;
+}
+
+.NotiHub{
+    color: #fff;
+    
+}
+
+.Tablones{
+    height: 30px;
+    border: 4px;
+}
 .menu-button,
 .refresh-button,
 .view-button,
@@ -30,7 +44,7 @@ nav {
 .profile-button {
     background: none;
     border: none;
-    color: white;
+    color: rgb(0, 0, 0);
     cursor: pointer;
     font-size: 15px;
 }
