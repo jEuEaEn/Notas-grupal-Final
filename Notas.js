@@ -37,3 +37,11 @@ toggleBtn.addEventListener("click", () => {
 });
 
 
+
+
+/*------------------ Notas------------------*/
+
+const titulo = document.getElementById("title")
+const texto = document.getElementById("text")
+
+titulo.classList.add = "desaparecer"
