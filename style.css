@@ -230,8 +230,7 @@ nav {
     font-size: 0.9rem;
     border: 1px solid ;
     height: 20px;
-    max-width: 400px;
-    min-width: 200px;
+    width: 500px;
 
   }
 
