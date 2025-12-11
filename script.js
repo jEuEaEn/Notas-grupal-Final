@@ -32,6 +32,21 @@ menu.addEventListener("click", () => {
 
 const titulo = document.getElementById("title")
 const texto = document.getElementById("text")
+const macion = document.getElementById("info")
+
+macion.addEventListener("focus",() =>{
+
+    titulo.classList.remove("desaparecer")
+    titulo.classList.add("aparecer")
+
+})
+
+
+
+
+
+
+
 
 //iniciar sesion
 document.getElementById("Iniciar sesion").addEventListener("click", function () {
@@ -42,3 +57,5 @@ document.getElementById("Iniciar sesion").addEventListener("click", function () 
 document.getElementById("Registrarse").addEventListener("click", function () {
     window.location.href = "register.html"; // aquí va el archivo al que quieres ir
 });
+
+
