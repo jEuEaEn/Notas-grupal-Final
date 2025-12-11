@@ -32,3 +32,13 @@ menu.addEventListener("click", () => {
 
 const titulo = document.getElementById("title")
 const texto = document.getElementById("text")
+
+//iniciar sesion
+document.getElementById("Iniciar sesion").addEventListener("click", function () {
+    window.location.href = "login.html"; // aquí va el archivo al que quieres ir
+});
+
+//Registrarse
+document.getElementById("Registrarse").addEventListener("click", function () {
+    window.location.href = "register.html"; // aquí va el archivo al que quieres ir
+});
