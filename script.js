@@ -37,7 +37,7 @@ const macion = document.getElementById("info")
 macion.addEventListener("focus",() =>{
 
     titulo.classList.remove("desaparecer")
-    titulo.classList.add("aparecer")
+    
 
 })
 
