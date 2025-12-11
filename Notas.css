@@ -37,6 +37,18 @@ nav {
     align-items: center;
     gap: 20px;
 
+
+}
+
+.menu-button{
+
+  img{
+
+    width: 40px;
+    height: 30px;
+
+  }
+
 }
 
 .keep{
