@@ -32,3 +32,10 @@ menu.addEventListener("click", () => {
 
 const titulo = document.getElementById("title")
 const texto = document.getElementById("text")
+
+texto.addEventListener("focus",() =>{
+
+    titulo.classList.remove("desaparecer")
+    titulo.classList.add("aparecer")
+
+})
