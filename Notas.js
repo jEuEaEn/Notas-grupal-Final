@@ -24,17 +24,17 @@ menu.addEventListener("click", () => {
 });
 
 //abrir
-toggleBtn.addEventListener("click", () => {
-    if (sidebar.classList.contains("collapsed")) {
-        // Se va a ABRIR → activar animación
-        sidebar.classList.remove("collapsed");
-        sidebar.classList.add("expanded");
-    } else {
-        // Se va a CERRAR → sin animación personalizada
-        sidebar.classList.remove("expanded");
-        sidebar.classList.add("collapsed");
-    }
-});
+    toggleBtn.addEventListener("click", () => {
+        if (sidebar.classList.contains("collapsed")) {
+            // Se va a ABRIR → activar animación
+            sidebar.classList.remove("collapsed");
+            sidebar.classList.add("expanded");
+        } else {
+            // Se va a CERRAR → sin animación personalizada
+            sidebar.classList.remove("expanded");
+            sidebar.classList.add("collapsed");
+        }
+    });
 
 
 
@@ -43,5 +43,3 @@ toggleBtn.addEventListener("click", () => {
 
 const titulo = document.getElementById("title")
 const texto = document.getElementById("text")
-
-titulo.classList.add = "desaparecer"
