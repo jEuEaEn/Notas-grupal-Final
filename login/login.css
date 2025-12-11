@@ -1,0 +1,67 @@
+body{
+    background-color: rgb(94, 95, 99);
+
+}
+.Blanco{
+    background-color: #fff;
+    max-width:  630px;
+    height: 793px;
+    margin: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+h1{
+
+    font-family:Arial, Helvetica, sans-serif;
+    color: rgb(33, 52, 221);
+}
+
+p{
+    margin-top: 40px;
+   display: flex;
+    font-family:Arial, Helvetica, sans-serif; 
+}
+main{
+    width: 70%;
+    
+}
+
+input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 400px;
+    outline: none;
+}
+
+button{
+    background-color: rgb(33, 52, 221);
+    margin-top: 40px;
+    border: none;
+    color: #fff;
+    width: 410px;
+    height: 30px;
+    border-radius: 5px;
+    font-family:Arial, Helvetica, sans-serif; 
+    
+}
+
+select{
+    width: 410px;
+    height: 30px;
+    font-family:Arial, Helvetica, sans-serif; 
+    outline: none;
+    color :#fff;
+    background-color: blue;
+    display: flex;
+    margin-top: 60px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    
+}
