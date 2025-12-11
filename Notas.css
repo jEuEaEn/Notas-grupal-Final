@@ -8,6 +8,13 @@ header{
   border-bottom: 1px solid #fff;
 }
 
+
+main{
+
+  display: flex;
+
+}
+
 nav {
 
     display: flex;
@@ -150,17 +157,6 @@ nav {
     gap: 15px;
 
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
