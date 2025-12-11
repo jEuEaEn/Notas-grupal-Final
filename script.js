@@ -32,5 +32,3 @@ menu.addEventListener("click", () => {
 
 const titulo = document.getElementById("title")
 const texto = document.getElementById("text")
-
-titulo.className = "desaparecer"
