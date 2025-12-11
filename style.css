@@ -10,7 +10,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #918f8f;
+    background: #000000;
     padding: 10px 15px;
     color: rgb(0, 0, 0);
     width: 100%;        /* ocupa toda la pantalla */
@@ -63,13 +63,57 @@ nav {
 }
 
 /* ---- Parte botones ---- */
-aside{
-
-    display: flex;
-    justify-content: column;
-    align-items: center;
-    
+/* ======== CONTENEDOR DEL MENÚ ======== */
+#sidebar {
+  width: 260px;
+  background: #202124;
+  min-height: 100vh;
+  padding-top: 12px;
+  font-family: Arial, sans-serif;
+  color: #e8eaed;
 }
+
+/* ======== BOTONES DEL MENÚ ======== */
+.sidebar-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 18px;
+  margin: 2px 0;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.15s ease;
+}
+
+/* hover estilo Keep */
+.sidebar-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* íconos (lo que te aparece como esos rectangulitos) */
+.sidebar-btn img,
+.sidebar-btn i {
+  width: 22px;
+  height: 22px;
+  opacity: 0.85;
+}
+
+/* texto de los botones */
+.sidebar-btn span {
+  color: #e8eaed;
+  font-weight: 500;
+}
+
+/* botón seleccionado (fondo marrón de Keep) */
+.sidebar-btn.activo {
+  background: #41331c !important;
+}
+
+.sidebar-btn.activo span {
+  color: #fff;
+}
+
 
 
 /* ---- DERECHA ---- */
