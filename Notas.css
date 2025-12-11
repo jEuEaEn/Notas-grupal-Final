@@ -12,7 +12,7 @@ header{
 main{
 
   display: flex;
-
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 nav {
@@ -20,7 +20,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #202124;
+    background: #202124;/* ---- color principal de la pagina ---- */
     padding: 10px 15px;
     color: rgb(0, 0, 0);
     width: 100%;        /* ocupa toda la pantalla */
@@ -160,6 +160,40 @@ nav {
     color: #fff !important;
 }
 
+/* Menu */
+
+/* Modo colapsado */
+#sidebar.colapsado {
+    width: 80px;            /* solo iconos */
+    transition: width 0.2s ease;
+}
+
+/* Oculta el texto cuando está colapsado */
+#sidebar.colapsado .sidebar-btn span {
+    display: none;
+}
+
+/* Centra los iconos cuando está colapsado */
+#sidebar.colapsado .sidebar-btn {
+    justify-content: center;
+    gap: 0;
+}
+
+/* Tamaño del icono en colapsado (opcional) */
+#sidebar.colapsado .sidebar-btn img {
+    margin-left: 0;
+}
+
+#sidebar.expanded {
+  width: 260px;
+  animation: abrirMenu 0.25s ease;
+}
+
+#sidebar.collapsed {
+  width: 68px; /* o el ancho que tú quieras */
+}
+
+
 
 /* ---- DERECHA ---- */
 .nav-right {
@@ -169,14 +203,6 @@ nav {
     gap: 15px;
 
 }
-
-
-
-
-
-
-
-
 
 
 
