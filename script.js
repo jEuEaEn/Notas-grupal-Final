@@ -32,13 +32,22 @@ menu.addEventListener("click", () => {
 
 const titulo = document.getElementById("title")
 const texto = document.getElementById("text")
+const macion = document.getElementById("info")
 
-texto.addEventListener("focus",() =>{
+macion.addEventListener("focus",() =>{
 
     titulo.classList.remove("desaparecer")
     titulo.classList.add("aparecer")
 
 })
+
+
+
+
+
+
+
+
 //iniciar sesion
 document.getElementById("Iniciar sesion").addEventListener("click", function () {
     window.location.href = "login.html"; // aquí va el archivo al que quieres ir
