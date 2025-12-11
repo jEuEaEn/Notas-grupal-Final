@@ -14,6 +14,24 @@ header{
   align-items: center;
 }
 
+.Inicio{
+  border: none;
+  border-radius: 2px;
+  background-color: rgb(231, 108, 64);
+  height: 30px;
+  color: #fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.Salir{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: none;
+  border-radius: 2px;
+  background-color: rgb(88, 88, 87);
+  height: 30px;
+  color: #fff;
+}
 
 main{
 
@@ -229,6 +247,9 @@ nav {
     padding: 1px;
     font-size: 0.9rem;
     border: 1px solid ;
+    height: 20px;
+    max-width: 400px;
+    min-width: 200px;
 
   }
 
