@@ -223,14 +223,27 @@ nav {
   display: flex;
   justify-content: center;  
 
-  #text{
+  .inputs{
+    
+    display: flex;
+    justify-content: center ;
+    width: 100%;
 
-    background-color: #202124;
-    padding: 1px;
-    font-size: 0.9rem;
-    border: 1px solid ;
-    height: 20px;
-    width: 500px;
+    #text{
+  
+      width: 100%;
+      background-color: #202124;
+      padding: 1px;
+      font-size: 0.9rem;
+      border: 1px solid ;
+      height: 20px;
+      max-width: 500px;
+      min-width: 300px;
+      margin: 10px;
+      
+  
+    }
+
 
   }
 
