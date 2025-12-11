@@ -4,6 +4,7 @@
     padding: 0;
     
 }
+
 header{
   border-bottom: 1px solid #fff;
   display: flex;
@@ -217,6 +218,18 @@ nav {
 .informations{
 
   height: 100%;
+
+}
+
+.desaparecer{
+
+  display: none;
+
+}
+
+.aparecer{
+
+  display: block;
 
 }
 
