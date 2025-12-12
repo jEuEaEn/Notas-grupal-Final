@@ -1,26 +1,30 @@
 const titulo = document.getElementById("title");
 const texto = document.getElementById("text");
+const archivar = document.getElementById("archivar");
+const quitar = document.getElementById("Cerrar");
 
 function envio(){
 
 // Para saber si están en focus o no
 let tituloFocus = false;
 let textoFocus = false;
+let archivarFocus = false;
+let XFocus = false;
 
-function mostrarTitulo() {
+function mostrarObjetos() {
     titulo.classList.remove("desaparecer");
     titulo.classList.add("aparecer");
 }
 
-function ocultarTitulo() {
+function ocultarObjetos() {
     titulo.classList.remove("aparecer");
     titulo.classList.add("desaparecer");
 }
 
 function verificarOcultar() {
     // Si ninguno tiene focus → ocultar
-    if (!tituloFocus && !textoFocus) {
-        ocultarTitulo();
+    if (!tituloFocus && !textoFocus && !archivarFocus && !XFocus) {
+        ocultarObjetos();
         envio2();
     }
 }
@@ -30,7 +34,7 @@ function verificarOcultar() {
 
 titulo.addEventListener("focus", () => {
     tituloFocus = true;
-    mostrarTitulo();
+    mostrarObjetos();
 });
 
 titulo.addEventListener("blur", () => {
@@ -44,7 +48,7 @@ titulo.addEventListener("blur", () => {
 
 texto.addEventListener("focus", () => {
     textoFocus = true;
-    mostrarTitulo();
+    mostrarObjetos();
 });
 
 texto.addEventListener("blur", () => {
