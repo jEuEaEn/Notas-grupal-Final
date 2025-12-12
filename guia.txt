@@ -1,0 +1,60 @@
+const informacion = document.getElementById("information")
+const envio = document.getElementById("Send")
+const me = document.getElementById("Nombres")
+
+const pitusa = []
+
+
+function papa(){
+
+    me.innerHTML = ""
+    pitusa.forEach((valor, indice) => {
+
+        const Alfredo = document.createElement("div")
+        Alfredo.className = "Notas"
+        me.appendChild(Alfredo)
+        
+
+        const p = document.createElement("p")
+
+        p.textContent = valor
+
+        Alfredo.appendChild(p)
+
+
+        const boton = document.createElement("button")
+        const eliminar = document.createElement("img")
+
+        eliminar.src = "./trash-x.png"
+        Alfredo.appendChild(boton)
+        boton.appendChild(eliminar)
+
+
+        
+        boton.addEventListener("click", () =>{
+            pitusa.splice(indice, 1)
+            papa()
+        })
+        console.log("SEND", valor)
+    })
+
+console.log("SEND")
+    
+}
+
+envio.addEventListener("keydown", (event) => {
+
+    if (event.key == "Enter") {
+        const texto = informacion.value;
+
+
+
+        if (texto.trim() !== "") {
+            pitusa.push(texto);
+            papa()
+        }
+
+
+    }
+
+})
