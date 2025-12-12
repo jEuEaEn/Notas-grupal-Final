@@ -50,3 +50,32 @@ texto.addEventListener("blur", () => {
 });
 
 
+
+
+
+/*----------Notas----------*/
+
+const ContentNote = document.getElementById("Note")
+const note = []
+
+function sheet(){
+
+  ContentNote.innerHTML = ""
+
+  note.forEach((valor,indice) =>{
+
+    const div = document.createElement("div")
+    div.className = "divNotas"
+    ContentNote.appendChild(div)
+
+
+    const Titulo = document.createElement("h4")
+    Titulo.textContent = valor
+    div.appendChild(Titulo)
+
+    const Texto = document.createElement("h2")
+      
+
+  })
+
+}
