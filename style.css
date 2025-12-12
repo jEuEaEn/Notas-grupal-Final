@@ -1,3 +1,9 @@
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
 * {
 
     margin: 0;
@@ -12,6 +18,10 @@ header{
   top: 0;
   z-index: 3;
   align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  left: 0;
+  right: 0;
 }
 
 .Inicio{
@@ -37,10 +47,10 @@ main{
 
   display: flex;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  height: 100vh;
-  
+  min-height: 100dvh;
   width: 100%;
   background: #202124;
+  overflow-x: hidden;
 }
 
 nav {
@@ -51,8 +61,10 @@ nav {
     background: #202124;/* ---- color principal de la pagina ---- */
     padding: 10px 15px;
     color: rgb(0, 0, 0);
+
     width: 100%;        /* ocupa toda la pantalla */
     height: 80px;       /* se ajusta al contenido */
+
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
@@ -115,7 +127,9 @@ nav {
 /* ---- Parte botones ---- */
 /* ======== CONTENEDOR DEL MENÚ ======== */
 #sidebar {
+  
   width: 260px;
+  max-width: 100%;
   background: #202124;
   font-family: Arial, sans-serif;
   color: #e8eaed;
