@@ -72,7 +72,7 @@ function sheet(){
     const Titulo = document.createElement("h4")
     Titulo.textContent = valor
     div.appendChild(Titulo)
-    Titulo.classList = ("")
+ 
 
     const Texto = document.createElement("h2")
       
