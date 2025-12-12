@@ -28,22 +28,6 @@ menu.addEventListener("click", () => {
 
 
 
-/*------------------ Notas------------------*/
-
-const titulo = document.getElementById("title")
-const texto = document.getElementById("text")
-const macion = document.getElementById("info")
-
-macion.addEventListener("focus",() =>{
-
-    titulo.classList.remove("desaparecer")
-    
-
-})
-
-
-
-
 
 
 
