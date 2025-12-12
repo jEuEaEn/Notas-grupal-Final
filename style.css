@@ -334,11 +334,6 @@ nav {
   box-sizing: border-box;
 }
 
-/* Mantener mínimo utilizable */
-body, html {
-  min-width: 360px;
-  overflow-x: hidden;
-}
 
 /* Inputs adaptables */
 @media (max-width: 600px) {
