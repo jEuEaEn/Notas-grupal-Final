@@ -1,0 +1,1 @@
+const Usuario = document.getElementById("User")

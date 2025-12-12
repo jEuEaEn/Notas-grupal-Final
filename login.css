@@ -63,3 +63,12 @@ button{
     display: flex;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+a{
+    outline: none;
+    text-align: center;
+    display: flex;
+    
+    color: #7c7b7b;
+}
+/* responsive */
