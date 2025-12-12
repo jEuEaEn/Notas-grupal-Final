@@ -58,3 +58,180 @@ envio.addEventListener("keydown", (event) => {
     }
 
 })
+
+codigo 
+
+
+
+const tituloInput = document.getElementById("title");
+const informacion = document.getElementById("information");
+const envio = document.getElementById("Send");
+const me = document.getElementById("Nombres");
+
+// Ahora usamos dos arrays:
+const noteTi = [];  // títulos
+const noteTe = [];  // textos
+
+function papa() {
+
+    me.innerHTML = "";
+
+    noteTi.forEach((titulo, indice) => {
+
+        const Alfredo = document.createElement("div");
+        Alfredo.className = "Notas";
+        me.appendChild(Alfredo);
+
+        // ---- TÍTULO ----
+        const h2 = document.createElement("h2");
+        h2.textContent = titulo;
+        Alfredo.appendChild(h2);
+
+        // ---- TEXTO ----
+        const p = document.createElement("p");
+        p.textContent = noteTe[indice]; // el texto correspondiente
+        Alfredo.appendChild(p);
+
+        // ---- BOTÓN ELIMINAR ----
+        const boton = document.createElement("button");
+        const eliminar = document.createElement("img");
+
+        eliminar.src = "./trash-x.png";
+        boton.appendChild(eliminar);
+        Alfredo.appendChild(boton);
+
+        boton.addEventListener("click", () => {
+            noteTi.splice(indice, 1);
+            noteTe.splice(indice, 1);
+            papa();
+        });
+
+    });
+
+}
+
+envio.addEventListener("keydown", (event) => {
+
+    if (event.key === "Enter") {
+
+        const tituloTxt = tituloInput.value;
+        const textoTxt = informacion.value;
+
+        // No guardar si ambos están vacíos
+        if (tituloTxt.trim() === "" && textoTxt.trim() === "") return;
+
+        // Guardamos los dos valores
+        noteTi.push(tituloTxt);
+        noteTe.push(textoTxt);
+
+        papa();
+    }
+
+});
+
+
+
+codigo 2
+
+
+/* --------------------- INPUTS ---------------------- */
+
+const titulo = document.getElementById("title");
+const texto = document.getElementById("text");
+
+/* ------------------- ESTADOS DE FOCUS ------------------- */
+
+let tituloFocus = false;
+let textoFocus = false;
+
+/* ------------------- MOSTRAR / OCULTAR TÍTULO ------------------- */
+
+function mostrarTitulo() {
+    titulo.classList.remove("desaparecer");
+    titulo.classList.add("aparecer");
+}
+
+function ocultarTitulo() {
+    titulo.classList.remove("aparecer");
+    titulo.classList.add("desaparecer");
+}
+
+function verificarOcultar() {
+    if (!tituloFocus && !textoFocus) {
+        ocultarTitulo();
+        envio2(); // ← Crear la nota cuando ambos están en blur
+    }
+}
+
+/* ------------------------ EVENTOS ------------------------ */
+
+titulo.addEventListener("focus", () => {
+    tituloFocus = true;
+    mostrarTitulo();
+});
+
+titulo.addEventListener("blur", () => {
+    tituloFocus = false;
+    setTimeout(verificarOcultar, 0);
+});
+
+texto.addEventListener("focus", () => {
+    textoFocus = true;
+    mostrarTitulo();
+});
+
+texto.addEventListener("blur", () => {
+    textoFocus = false;
+    setTimeout(verificarOcultar, 0);
+});
+
+/* ------------------------- NOTAS -------------------------- */
+
+const ContentNote = document.getElementById("Note");
+const noteTi = [];
+const noteTe = [];
+
+/* ------------------ DIBUJAR NOTAS ------------------ */
+
+function sheet() {
+
+    ContentNote.innerHTML = "";
+
+    noteTi.forEach((valor, indice) => {
+
+        const div = document.createElement("div");
+        div.className = "divNotas";
+        ContentNote.appendChild(div);
+
+        const Titulo = document.createElement("h2");
+        Titulo.textContent = valor;
+        Titulo.classList.add("Titulo");
+        div.appendChild(Titulo);
+
+        const Texto = document.createElement("h4");
+        Texto.textContent = noteTe[indice];
+        Texto.classList.add("Texto");
+        div.appendChild(Texto);
+    });
+}
+
+/* ------------------ CREAR NOTA ------------------ */
+
+function envio2() {
+
+    // Evitar notas vacías
+    if (titulo.value.trim() === "" && texto.value.trim() === "") {
+        return;
+    }
+
+    // Guardar los datos
+    noteTi.push(titulo.value);
+    noteTe.push(texto.value);
+
+    // Limpiar inputs
+    titulo.value = "";
+    texto.value = "";
+
+    // Actualizar notas
+    sheet();
+}
