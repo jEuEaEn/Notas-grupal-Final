@@ -1,6 +1,8 @@
 const titulo = document.getElementById("title");
 const texto = document.getElementById("text");
 
+function envio(){
+
 // Para saber si están en focus o no
 let tituloFocus = false;
 let textoFocus = false;
@@ -49,9 +51,9 @@ texto.addEventListener("blur", () => {
     setTimeout(verificarOcultar, 0);
 });
 
+}
 
-
-
+envio()
 
 /*----------Notas----------*/
 
@@ -76,10 +78,16 @@ function sheet(){
     div.appendChild(Titulo)
 
     const Texto = document.createElement("h4")
-    Texto.textContent = indice
+    Texto.textContent = noteTe[indice]
     Texto.classList.add("Texto")
     div.appendChild(Texto)
 
+
+    function envio2(){
+
+      
+
+    }
 
 
   })
