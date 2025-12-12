@@ -235,3 +235,108 @@ function envio2() {
     // Actualizar notas
     sheet();
 }
+
+
+codigo3:
+
+/* --------------------- INPUTS ---------------------- */
+
+const titulo = document.getElementById("title");
+const texto = document.getElementById("text");
+
+/* ------------------- ESTADOS DE FOCUS ------------------- */
+
+let tituloFocus = false;
+let textoFocus = false;
+
+/* ------------------- MOSTRAR / OCULTAR TÍTULO ------------------- */
+
+function mostrarTitulo() {
+    titulo.classList.remove("desaparecer");
+    titulo.classList.add("aparecer");
+}
+
+function ocultarTitulo() {
+    titulo.classList.remove("aparecer");
+    titulo.classList.add("desaparecer");
+}
+
+function verificarOcultar() {
+    if (!tituloFocus && !textoFocus) {
+        ocultarTitulo();
+        envio2(); // ← crear la nota cuando ambos inputs pierden foco
+    }
+}
+
+/* ------------------------ EVENTOS ------------------------ */
+
+titulo.addEventListener("focus", () => {
+    tituloFocus = true;
+    mostrarTitulo();
+});
+
+titulo.addEventListener("blur", () => {
+    tituloFocus = false;
+    setTimeout(verificarOcultar, 0);
+});
+
+texto.addEventListener("focus", () => {
+    textoFocus = true;
+    mostrarTitulo();
+});
+
+texto.addEventListener("blur", () => {
+    textoFocus = false;
+    setTimeout(verificarOcultar, 0);
+});
+
+/* ------------------------- NOTAS -------------------------- */
+
+const ContentNote = document.getElementById("Note");
+const noteTi = [];
+const noteTe = [];
+
+/* ------------------ DIBUJAR NOTAS ------------------ */
+
+function sheet() {
+
+    ContentNote.innerHTML = "";
+
+    noteTi.forEach((valor, indice) => {
+
+        const div = document.createElement("div");
+        div.className = "divNotas";
+        ContentNote.appendChild(div);
+
+        const Titulo = document.createElement("h2");
+        Titulo.textContent = valor;
+        Titulo.classList.add("Titulo");
+        div.appendChild(Titulo);
+
+        const Texto = document.createElement("h4");
+        Texto.textContent = noteTe[indice];
+        Texto.classList.add("Texto");
+        div.appendChild(Texto);
+    });
+}
+
+/* ------------------ CREAR NOTA ------------------ */
+
+function envio2() {
+
+    // Evitar notas vacías
+    if (titulo.value.trim() === "" && texto.value.trim() === "") {
+        return;
+    }
+
+    // Guardar los datos
+    noteTi.push(titulo.value);
+    noteTe.push(texto.value);
+
+    // Limpiar inputs
+    titulo.value = "";
+    texto.value = "";
+
+    // Actualizar notas
+    sheet();
+}

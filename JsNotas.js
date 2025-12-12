@@ -21,6 +21,7 @@ function verificarOcultar() {
     // Si ninguno tiene focus → ocultar
     if (!tituloFocus && !textoFocus) {
         ocultarTitulo();
+        envio2();
     }
 }
 
@@ -83,14 +84,25 @@ function sheet(){
     Texto.classList.add("Texto")
     div.appendChild(Texto)
 
+})
 
-    function envio2(){
+}
 
-      
+function envio2(){
 
-    }
+  if(titulo.value.trim() == "" && texto.value.trim() == ""){
 
+    alert("por favor rellena los dos recuadros")
+    return
 
-  })
+  }
+
+  noteTi.push(titulo.value);
+  noteTe.push(texto.value);
+
+  titulo.value = ""
+  texto.value = ""
+
+  sheet();
 
 }
