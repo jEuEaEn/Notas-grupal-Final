@@ -1,6 +1,5 @@
 html, body {
   width: 100%;
-  overflow-x: hidden;
 }
 
 
@@ -9,6 +8,16 @@ html, body {
     margin: 0;
     padding: 0;
     
+}
+
+@media (max-width: 600px) {
+ 
+  .logo h3{
+
+    display: none;
+
+  }
+
 }
 
 header{
@@ -48,8 +57,11 @@ main{
   display: flex;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   min-height: 100dvh;
-  width: 100%;
+  min-width: 0;
   background: #202124;
+  overflow-x: hidden;
+  padding-top: 10px;
+  border: 1px solid rgba(255, 255, 255, 0);
   overflow-x: hidden;
 }
 
@@ -129,7 +141,7 @@ nav {
 #sidebar {
   
   width: 260px;
-  max-width: 100%;
+  flex-shrink: 0;
   background: #202124;
   font-family: Arial, sans-serif;
   color: #e8eaed;

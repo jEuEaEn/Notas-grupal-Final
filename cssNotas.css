@@ -1,13 +1,13 @@
-.informations{
-
-  height: 100%;
-  width: 100%;
+.informations {
+  flex: 1; /* ocupa todo el espacio restante */
+  min-width: 0;
   display: flex;
   flex-direction: column;
-  width: calc(100% - 260px);
-
-  
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
 }
+
 .inputs{
   
   display: flex;
@@ -16,12 +16,25 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   align-items: center;
   
-
-  
-  
-  
-  
 }
+
+@media (max-width: 600px) {
+  #sidebar {
+    width: 60px;
+  }
+
+  .informations {
+    padding: 10px;
+  }
+
+  #title, #text {
+    width: 90%;
+    max-width: 100%;
+    min-width: 0;
+  }
+}
+
+
 #title{
   
   margin-top: 10px;
@@ -65,7 +78,3 @@
   display: block;
 
 }
-
-
-
-
