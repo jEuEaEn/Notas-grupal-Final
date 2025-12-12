@@ -48,3 +48,5 @@ texto.addEventListener("blur", () => {
     textoFocus = false;
     setTimeout(verificarOcultar, 0);
 });
+
+
