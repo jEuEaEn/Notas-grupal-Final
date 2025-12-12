@@ -1,28 +1,49 @@
-const titulo = document.getElementById("title");
-const texto = document.getElementById("text");
+document.addEventListener("DOMContentLoaded", () => {
+  const titulo = document.getElementById("title");
+  const texto = document.getElementById("text");
+  const contenedor = document.getElementById("info"); // tu contenedor
 
-function verificarDesaparicion() {
-    // Si el elemento enfocado NO es titulo NI texto → ocultar
-    if (
-        document.activeElement !== titulo &&
-        document.activeElement !== texto
-    ) {
-        titulo.classList.add("desaparecer");
-        titulo.classList.remove("aparecer");
+  if (!titulo || !texto || !contenedor) {
+    console.warn("No se encontraron los elementos: revisa los IDs");
+    return;
+  }
+
+  function mostrarTitulo() {
+    titulo.classList.add("aparecer");
+    titulo.classList.remove("desaparecer");
+  }
+
+  function ocultarTitulo() {
+    titulo.classList.add("desaparecer");
+    titulo.classList.remove("aparecer");
+  }
+
+  // Cuando cualquier elemento dentro del contenedor recibe foco -> mostrar
+  contenedor.addEventListener("focusin", () => {
+    mostrarTitulo();
+  });
+
+  // Cuando el foco SALE del contenedor por completo -> ocultar
+  contenedor.addEventListener("focusout", (e) => {
+    // relatedTarget es el elemento que recibe el foco ahora (puede ser null)
+    const siguiente = e.relatedTarget;
+
+    // Si nextFocus no está dentro del contenedor -> ocultar
+    if (!contenedor.contains(siguiente)) {
+      ocultarTitulo();
     }
-}
+    // Si nextFocus está dentro del contenedor, NO ocultamos (porque aún hay foco en algún input)
+  });
 
-// Al hacer blur, verificamos
-titulo.addEventListener("blur", verificarDesaparicion);
-texto.addEventListener("blur", verificarDesaparicion);
+  // Fallback (por si el navegador no soporta relatedTarget correctamente):
+  // revisa después de un micro-tick dónde está el foco
+  contenedor.addEventListener("focusout", () => {
+    setTimeout(() => {
+      const activo = document.activeElement;
+      if (!contenedor.contains(activo)) {
+        ocultarTitulo();
+      }
+    }, 0);
+  });
 
-// Si alguno hace focus, el título aparece
-titulo.addEventListener("focus", () => {
-    titulo.classList.add("aparecer");
-    titulo.classList.remove("desaparecer");
-});
-
-texto.addEventListener("focus", () => {
-    titulo.classList.add("aparecer");
-    titulo.classList.remove("desaparecer");
 });
