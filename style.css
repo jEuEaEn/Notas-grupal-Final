@@ -38,7 +38,7 @@ main{
   display: flex;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   height: 100vh;
-  min-height: 100vh;
+  
   width: 100%;
   background: #202124;
 }
@@ -328,33 +328,5 @@ nav {
   animation-delay: -0.1s;
 }
 
-
-/* Evitar que algo se salga del borde en pantallas pequeñas */
-* {
-  box-sizing: border-box;
-}
-
-/* Mantener mínimo utilizable */
-body, html {
-  min-width: 360px;
-  overflow-x: hidden;
-}
-
-/* Inputs adaptables */
-@media (max-width: 600px) {
-
-  .informations .inputs {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  #title,
-  #text {
-    width: 100%;
-    max-width: 95%;
-    min-width: 95%;
-  }
-}
 
 
