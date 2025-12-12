@@ -73,7 +73,7 @@ function sheet(){
     ContentNote.appendChild(div)
 
 
-    const Titulo = document.createElement("h2")
+    const Titulo = document.createElement("p")
     Titulo.textContent = valor
     Titulo.classList.add("Titulo")
     div.appendChild(Titulo)
@@ -93,7 +93,7 @@ function envio2(){
   if(titulo.value.trim() == "" && texto.value.trim() == ""){
 
     alert("por favor rellena los dos recuadros")
-    return
+    return;
 
   }
 
