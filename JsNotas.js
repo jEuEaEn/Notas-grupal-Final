@@ -76,6 +76,7 @@ function sheet(){
     Titulo.textContent = valor
     Titulo.classList.add("Titulo")
     div.appendChild(Titulo)
+ 
 
     const Texto = document.createElement("h4")
     Texto.textContent = noteTe[indice]
