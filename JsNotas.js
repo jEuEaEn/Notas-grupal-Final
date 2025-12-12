@@ -30,6 +30,19 @@ function verificarOcultar() {
 }
 
 
+//  LISTENERS DE ARCHIVAR
+
+archivar.addEventListener("focus", () => {
+    archivarFocus = true;
+    mostrarObjetos();
+});
+
+archivar.addEventListener("blur", () => {
+    archivarFocus = false;
+    // Esperar a que el navegador actualice el focus real
+    setTimeout(verificarOcultar, 0);
+});
+
 //  LISTENERS DEL TÍTULO
 
 titulo.addEventListener("focus", () => {
@@ -55,6 +68,7 @@ texto.addEventListener("blur", () => {
     textoFocus = false;
     setTimeout(verificarOcultar, 0);
 });
+
 
 }
 
