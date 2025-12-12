@@ -53,8 +53,9 @@
 }
 
 #text{
-  
+  outline: none;
   resize: none;
+  border: 1px solid #fff;
   font-size: 0.9rem;
   background-color: #202124;
   color: #fff;
