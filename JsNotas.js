@@ -73,13 +73,13 @@ function sheet(){
     ContentNote.appendChild(div)
 
 
-    const Titulo = document.createElement("p")
+    const Titulo = document.createElement("h1")
     Titulo.textContent = valor
     Titulo.classList.add("Titulo")
     div.appendChild(Titulo)
  
 
-    const Texto = document.createElement("h4")
+    const Texto = document.createElement("p")
     Texto.textContent = noteTe[indice]
     Texto.classList.add("Texto")
     div.appendChild(Texto)
