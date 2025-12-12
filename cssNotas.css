@@ -9,6 +9,9 @@
     
     display: flex;
     width: 100%;
+    flex-direction: column;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
 
     input{
 
@@ -20,6 +23,11 @@
       width: 100%;
       background-color: #202124;
       padding: 1px;
+      color: #fff;
+
+      outline: none;
+      
+
 
     }
 
@@ -27,17 +35,24 @@
 
 
       font-size: 1.2rem;
-      
+      outline: none;
+      color: #fff;
+      border-radius: 3px;
+      height: 30px;
 
     }
 
     #text{
   
       font-size: 0.9rem;
+      color: #fff;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      height: 100px;
       
   
     }
 
+    
 
   }
 
@@ -54,5 +69,7 @@
   display: block;
 
 }
+
+
 
 
